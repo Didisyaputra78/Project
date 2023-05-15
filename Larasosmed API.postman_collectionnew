@@ -1,0 +1,904 @@
+{
+	"info": {
+		"_postman_id": "0400f26f-5fd8-4770-a85d-0c35ad19f339",
+		"name": "LARASOSMED API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27406729",
+		"_collection_link": "https://cloudy-robot-809228.postman.co/workspace/My-Workspace~427cac4d-1979-40c1-8fdc-25a31e27c705/collection/27406729-0400f26f-5fd8-4770-a85d-0c35ad19f339?action=share&creator=27406729&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "Jane",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Doe",
+									"type": "text"
+								},
+								{
+									"key": "date_of_birth",
+									"value": "1995-01-01",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "triarrohman1@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "089626426144",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "janedoe",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "janedoe123",
+									"type": "text"
+								},
+								{
+									"key": "re_password",
+									"value": "janedoe123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}{{base}}{{version}}/register",
+							"host": [
+								"{{protocol}}{{host}}{{port}}{{base}}{{version}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "johndoe",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}{{base}}{{version}}/login",
+							"host": [
+								"{{protocol}}{{host}}{{port}}{{base}}{{version}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}{{base}}{{version}}/logout",
+							"host": [
+								"{{protocol}}{{host}}{{port}}{{base}}{{version}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User - Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}{{base}}{{version}}/user/246d834f-f258-11ed-8cad-0242ac120002",
+							"host": [
+								"{{protocol}}{{host}}{{port}}{{base}}{{version}}"
+							],
+							"path": [
+								"user",
+								"246d834f-f258-11ed-8cad-0242ac120002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User - Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "Johnxxx",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Doe",
+									"type": "text"
+								},
+								{
+									"key": "date_of_birth",
+									"value": "1996-01-01",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "triarrohman@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "089626426145",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "johndoe",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}{{base}}{{version}}/user/246d834f-f258-11ed-8cad-0242ac120002",
+							"host": [
+								"{{protocol}}{{host}}{{port}}{{base}}{{version}}"
+							],
+							"path": [
+								"user",
+								"246d834f-f258-11ed-8cad-0242ac120002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User - Follow",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "following",
+									"value": "3b932b7d-f25f-11ed-8cad-0242ac120002",
+									"description": "ID user yang akan di follow",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}{{base}}{{version}}/user/follow/14b76eea-f25f-11ed-8cad-0242ac120002",
+							"host": [
+								"{{protocol}}{{host}}{{port}}{{base}}{{version}}"
+							],
+							"path": [
+								"user",
+								"follow",
+								"14b76eea-f25f-11ed-8cad-0242ac120002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User - Unfollow",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "following",
+									"value": "3b932b7d-f25f-11ed-8cad-0242ac120002",
+									"description": "ID user yang akan di unfollow",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}{{base}}{{version}}/user/unfollow/14b76eea-f25f-11ed-8cad-0242ac120002",
+							"host": [
+								"{{protocol}}{{host}}{{port}}{{base}}{{version}}"
+							],
+							"path": [
+								"user",
+								"unfollow",
+								"14b76eea-f25f-11ed-8cad-0242ac120002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Password - Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin123",
+									"type": "text"
+								},
+								{
+									"key": "re_password",
+									"value": "admin123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}{{base}}{{version}}/user/password/14b76eea-f25f-11ed-8cad-0242ac120002",
+							"host": [
+								"{{protocol}}{{host}}{{port}}{{base}}{{version}}"
+							],
+							"path": [
+								"user",
+								"password",
+								"14b76eea-f25f-11ed-8cad-0242ac120002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User - Followers",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJiM2VhNWFjNi00ZDMxLTQzN2ItOTY2MC00YTJiMTgyZjU2ODMiLCJqdGkiOiJmNGE1ODE2YjEyNjUwOTE0YjQwYjZhY2I3ODg4MWRlZTA3ZDUyNDcxM2NiMTBlYzcwNGRmYTM1ZTkyMThhNDgzOWQ0MWQ0YWFiOWE3YzBiMyIsImlhdCI6MTY4NDA2NTg5MC41NDQ0NzgsIm5iZiI6MTY4NDA2NTg5MC41NDQ0NzksImV4cCI6MTY5OTk2MzQ5MC41MzAzNjMsInN1YiI6IjAiLCJzY29wZXMiOltdfQ.NE4Y9nknscZ6hlA_1OIFpgu2X_KDKOVtMx5i1LUAitPr8RAs3o3cAFa7PY1DJLhVQe0y7th54RW-DimtqR2dqK5GNDhWj4wAaZXrL0d3sG33kChmjkxmKyTemnrfr70-ko1mxt0LN0I2RKnJ12r307JMeSyqYjfp1_k5wWufhIbq03ge2Rt7zNQzK9U_hIYmbfCdK1oD7piBes_Pt8t0KUZEUOdMWBQ_OlF24GZ8YV4jQeGhwIMb2LyI1DrmndQpBl-bF6qJEzRVeaCOr5oe-vgEaRt-sH7ts5IJ3WRqwiEHj5E1pJ1bXXxp5ID5d3e_sdr0zmQA2z_Wxtv9TL79amVQo9KY-tSJ9QfOZAiErvffLJhXUxBaINVIPWIKEaJ7f2dCfIoNOlwoy-BLQ9NY-ry8crpNDwHSLpjFAdcCuoYiuZ2YF5kb-y0-I3UIzmjSuFlNcxTKP5xhOftzWEWUp2g9PL_pLi-3p0Mx8i4Sq21AdBJl4lxIz_-BuUS7o4Xe84EizJ2WtW8WbPAHWibBR7kXUT6pyCbI-LiIMyzvTNQsE-hZa-nfvz9zWoArdcZTAEAowNf0mruOdVafo_JDVyDqYC-1S-J-WiVJOEtTV9Lk3erEd8uNE-NbNS6PttPo87pCWSNJ_f_UIeM5GzfTt5Sw9jndgelZ6nQHidVP3DM",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}{{base}}{{version}}/user/followers/14b76eea-f25f-11ed-8cad-0242ac120002?skip=0&take=10",
+							"host": [
+								"{{protocol}}{{host}}{{port}}{{base}}{{version}}"
+							],
+							"path": [
+								"user",
+								"followers",
+								"14b76eea-f25f-11ed-8cad-0242ac120002"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "take",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User - Following",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJiM2VhNWFjNi00ZDMxLTQzN2ItOTY2MC00YTJiMTgyZjU2ODMiLCJqdGkiOiJmNGE1ODE2YjEyNjUwOTE0YjQwYjZhY2I3ODg4MWRlZTA3ZDUyNDcxM2NiMTBlYzcwNGRmYTM1ZTkyMThhNDgzOWQ0MWQ0YWFiOWE3YzBiMyIsImlhdCI6MTY4NDA2NTg5MC41NDQ0NzgsIm5iZiI6MTY4NDA2NTg5MC41NDQ0NzksImV4cCI6MTY5OTk2MzQ5MC41MzAzNjMsInN1YiI6IjAiLCJzY29wZXMiOltdfQ.NE4Y9nknscZ6hlA_1OIFpgu2X_KDKOVtMx5i1LUAitPr8RAs3o3cAFa7PY1DJLhVQe0y7th54RW-DimtqR2dqK5GNDhWj4wAaZXrL0d3sG33kChmjkxmKyTemnrfr70-ko1mxt0LN0I2RKnJ12r307JMeSyqYjfp1_k5wWufhIbq03ge2Rt7zNQzK9U_hIYmbfCdK1oD7piBes_Pt8t0KUZEUOdMWBQ_OlF24GZ8YV4jQeGhwIMb2LyI1DrmndQpBl-bF6qJEzRVeaCOr5oe-vgEaRt-sH7ts5IJ3WRqwiEHj5E1pJ1bXXxp5ID5d3e_sdr0zmQA2z_Wxtv9TL79amVQo9KY-tSJ9QfOZAiErvffLJhXUxBaINVIPWIKEaJ7f2dCfIoNOlwoy-BLQ9NY-ry8crpNDwHSLpjFAdcCuoYiuZ2YF5kb-y0-I3UIzmjSuFlNcxTKP5xhOftzWEWUp2g9PL_pLi-3p0Mx8i4Sq21AdBJl4lxIz_-BuUS7o4Xe84EizJ2WtW8WbPAHWibBR7kXUT6pyCbI-LiIMyzvTNQsE-hZa-nfvz9zWoArdcZTAEAowNf0mruOdVafo_JDVyDqYC-1S-J-WiVJOEtTV9Lk3erEd8uNE-NbNS6PttPo87pCWSNJ_f_UIeM5GzfTt5Sw9jndgelZ6nQHidVP3DM",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}{{base}}{{version}}/user/following/14b76eea-f25f-11ed-8cad-0242ac120002?skip=0&take=10",
+							"host": [
+								"{{protocol}}{{host}}{{port}}{{base}}{{version}}"
+							],
+							"path": [
+								"user",
+								"following",
+								"14b76eea-f25f-11ed-8cad-0242ac120002"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "take",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User - Index",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJiM2VhNWFjNi00ZDMxLTQzN2ItOTY2MC00YTJiMTgyZjU2ODMiLCJqdGkiOiJmNGE1ODE2YjEyNjUwOTE0YjQwYjZhY2I3ODg4MWRlZTA3ZDUyNDcxM2NiMTBlYzcwNGRmYTM1ZTkyMThhNDgzOWQ0MWQ0YWFiOWE3YzBiMyIsImlhdCI6MTY4NDA2NTg5MC41NDQ0NzgsIm5iZiI6MTY4NDA2NTg5MC41NDQ0NzksImV4cCI6MTY5OTk2MzQ5MC41MzAzNjMsInN1YiI6IjAiLCJzY29wZXMiOltdfQ.NE4Y9nknscZ6hlA_1OIFpgu2X_KDKOVtMx5i1LUAitPr8RAs3o3cAFa7PY1DJLhVQe0y7th54RW-DimtqR2dqK5GNDhWj4wAaZXrL0d3sG33kChmjkxmKyTemnrfr70-ko1mxt0LN0I2RKnJ12r307JMeSyqYjfp1_k5wWufhIbq03ge2Rt7zNQzK9U_hIYmbfCdK1oD7piBes_Pt8t0KUZEUOdMWBQ_OlF24GZ8YV4jQeGhwIMb2LyI1DrmndQpBl-bF6qJEzRVeaCOr5oe-vgEaRt-sH7ts5IJ3WRqwiEHj5E1pJ1bXXxp5ID5d3e_sdr0zmQA2z_Wxtv9TL79amVQo9KY-tSJ9QfOZAiErvffLJhXUxBaINVIPWIKEaJ7f2dCfIoNOlwoy-BLQ9NY-ry8crpNDwHSLpjFAdcCuoYiuZ2YF5kb-y0-I3UIzmjSuFlNcxTKP5xhOftzWEWUp2g9PL_pLi-3p0Mx8i4Sq21AdBJl4lxIz_-BuUS7o4Xe84EizJ2WtW8WbPAHWibBR7kXUT6pyCbI-LiIMyzvTNQsE-hZa-nfvz9zWoArdcZTAEAowNf0mruOdVafo_JDVyDqYC-1S-J-WiVJOEtTV9Lk3erEd8uNE-NbNS6PttPo87pCWSNJ_f_UIeM5GzfTt5Sw9jndgelZ6nQHidVP3DM",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}{{base}}{{version}}/user?skip=0&take=10",
+							"host": [
+								"{{protocol}}{{host}}{{port}}{{base}}{{version}}"
+							],
+							"path": [
+								"user"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "take",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User - Find",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJiM2VhNWFjNi00ZDMxLTQzN2ItOTY2MC00YTJiMTgyZjU2ODMiLCJqdGkiOiJmNGE1ODE2YjEyNjUwOTE0YjQwYjZhY2I3ODg4MWRlZTA3ZDUyNDcxM2NiMTBlYzcwNGRmYTM1ZTkyMThhNDgzOWQ0MWQ0YWFiOWE3YzBiMyIsImlhdCI6MTY4NDA2NTg5MC41NDQ0NzgsIm5iZiI6MTY4NDA2NTg5MC41NDQ0NzksImV4cCI6MTY5OTk2MzQ5MC41MzAzNjMsInN1YiI6IjAiLCJzY29wZXMiOltdfQ.NE4Y9nknscZ6hlA_1OIFpgu2X_KDKOVtMx5i1LUAitPr8RAs3o3cAFa7PY1DJLhVQe0y7th54RW-DimtqR2dqK5GNDhWj4wAaZXrL0d3sG33kChmjkxmKyTemnrfr70-ko1mxt0LN0I2RKnJ12r307JMeSyqYjfp1_k5wWufhIbq03ge2Rt7zNQzK9U_hIYmbfCdK1oD7piBes_Pt8t0KUZEUOdMWBQ_OlF24GZ8YV4jQeGhwIMb2LyI1DrmndQpBl-bF6qJEzRVeaCOr5oe-vgEaRt-sH7ts5IJ3WRqwiEHj5E1pJ1bXXxp5ID5d3e_sdr0zmQA2z_Wxtv9TL79amVQo9KY-tSJ9QfOZAiErvffLJhXUxBaINVIPWIKEaJ7f2dCfIoNOlwoy-BLQ9NY-ry8crpNDwHSLpjFAdcCuoYiuZ2YF5kb-y0-I3UIzmjSuFlNcxTKP5xhOftzWEWUp2g9PL_pLi-3p0Mx8i4Sq21AdBJl4lxIz_-BuUS7o4Xe84EizJ2WtW8WbPAHWibBR7kXUT6pyCbI-LiIMyzvTNQsE-hZa-nfvz9zWoArdcZTAEAowNf0mruOdVafo_JDVyDqYC-1S-J-WiVJOEtTV9Lk3erEd8uNE-NbNS6PttPo87pCWSNJ_f_UIeM5GzfTt5Sw9jndgelZ6nQHidVP3DM",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}{{base}}{{version}}/user/14b76eea-f25f-11ed-8cad-0242ac120002",
+							"host": [
+								"{{protocol}}{{host}}{{port}}{{base}}{{version}}"
+							],
+							"path": [
+								"user",
+								"14b76eea-f25f-11ed-8cad-0242ac120002"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Feed",
+			"item": [
+				{
+					"name": "User - Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}{{base}}{{version}}/user/246d834f-f258-11ed-8cad-0242ac120002",
+							"host": [
+								"{{protocol}}{{host}}{{port}}{{base}}{{version}}"
+							],
+							"path": [
+								"user",
+								"246d834f-f258-11ed-8cad-0242ac120002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Feed - Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text"
+								},
+								{
+									"key": "caption",
+									"value": "Wleowleo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}{{base}}{{version}}/feed/d209689f-b7ed-4382-9b04-b4dcbb3ba706",
+							"host": [
+								"{{protocol}}{{host}}{{port}}{{base}}{{version}}"
+							],
+							"path": [
+								"feed",
+								"d209689f-b7ed-4382-9b04-b4dcbb3ba706"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Feed - Like List",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJiM2VhNWFjNi00ZDMxLTQzN2ItOTY2MC00YTJiMTgyZjU2ODMiLCJqdGkiOiJmNGE1ODE2YjEyNjUwOTE0YjQwYjZhY2I3ODg4MWRlZTA3ZDUyNDcxM2NiMTBlYzcwNGRmYTM1ZTkyMThhNDgzOWQ0MWQ0YWFiOWE3YzBiMyIsImlhdCI6MTY4NDA2NTg5MC41NDQ0NzgsIm5iZiI6MTY4NDA2NTg5MC41NDQ0NzksImV4cCI6MTY5OTk2MzQ5MC41MzAzNjMsInN1YiI6IjAiLCJzY29wZXMiOltdfQ.NE4Y9nknscZ6hlA_1OIFpgu2X_KDKOVtMx5i1LUAitPr8RAs3o3cAFa7PY1DJLhVQe0y7th54RW-DimtqR2dqK5GNDhWj4wAaZXrL0d3sG33kChmjkxmKyTemnrfr70-ko1mxt0LN0I2RKnJ12r307JMeSyqYjfp1_k5wWufhIbq03ge2Rt7zNQzK9U_hIYmbfCdK1oD7piBes_Pt8t0KUZEUOdMWBQ_OlF24GZ8YV4jQeGhwIMb2LyI1DrmndQpBl-bF6qJEzRVeaCOr5oe-vgEaRt-sH7ts5IJ3WRqwiEHj5E1pJ1bXXxp5ID5d3e_sdr0zmQA2z_Wxtv9TL79amVQo9KY-tSJ9QfOZAiErvffLJhXUxBaINVIPWIKEaJ7f2dCfIoNOlwoy-BLQ9NY-ry8crpNDwHSLpjFAdcCuoYiuZ2YF5kb-y0-I3UIzmjSuFlNcxTKP5xhOftzWEWUp2g9PL_pLi-3p0Mx8i4Sq21AdBJl4lxIz_-BuUS7o4Xe84EizJ2WtW8WbPAHWibBR7kXUT6pyCbI-LiIMyzvTNQsE-hZa-nfvz9zWoArdcZTAEAowNf0mruOdVafo_JDVyDqYC-1S-J-WiVJOEtTV9Lk3erEd8uNE-NbNS6PttPo87pCWSNJ_f_UIeM5GzfTt5Sw9jndgelZ6nQHidVP3DM",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}{{base}}{{version}}/feed/like/44340640-4239-4fdc-b9c1-01d1a84c6de3?skip=0&take=10",
+							"host": [
+								"{{protocol}}{{host}}{{port}}{{base}}{{version}}"
+							],
+							"path": [
+								"feed",
+								"like",
+								"44340640-4239-4fdc-b9c1-01d1a84c6de3"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "take",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Feed - Like",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id_user",
+									"value": "3b932b7d-f25f-11ed-8cad-0242ac120002",
+									"description": "ID user yang like",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}{{base}}{{version}}/feed/like/44340640-4239-4fdc-b9c1-01d1a84c6de3",
+							"host": [
+								"{{protocol}}{{host}}{{port}}{{base}}{{version}}"
+							],
+							"path": [
+								"feed",
+								"like",
+								"44340640-4239-4fdc-b9c1-01d1a84c6de3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Feed - Unlike",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id_user",
+									"value": "3b932b7d-f25f-11ed-8cad-0242ac120002",
+									"description": "ID user yang unlike",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}{{base}}{{version}}/feed/unlike/d209689f-b7ed-4382-9b04-b4dcbb3ba706",
+							"host": [
+								"{{protocol}}{{host}}{{port}}{{base}}{{version}}"
+							],
+							"path": [
+								"feed",
+								"unlike",
+								"d209689f-b7ed-4382-9b04-b4dcbb3ba706"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Feed - Comment List",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJiM2VhNWFjNi00ZDMxLTQzN2ItOTY2MC00YTJiMTgyZjU2ODMiLCJqdGkiOiJmNGE1ODE2YjEyNjUwOTE0YjQwYjZhY2I3ODg4MWRlZTA3ZDUyNDcxM2NiMTBlYzcwNGRmYTM1ZTkyMThhNDgzOWQ0MWQ0YWFiOWE3YzBiMyIsImlhdCI6MTY4NDA2NTg5MC41NDQ0NzgsIm5iZiI6MTY4NDA2NTg5MC41NDQ0NzksImV4cCI6MTY5OTk2MzQ5MC41MzAzNjMsInN1YiI6IjAiLCJzY29wZXMiOltdfQ.NE4Y9nknscZ6hlA_1OIFpgu2X_KDKOVtMx5i1LUAitPr8RAs3o3cAFa7PY1DJLhVQe0y7th54RW-DimtqR2dqK5GNDhWj4wAaZXrL0d3sG33kChmjkxmKyTemnrfr70-ko1mxt0LN0I2RKnJ12r307JMeSyqYjfp1_k5wWufhIbq03ge2Rt7zNQzK9U_hIYmbfCdK1oD7piBes_Pt8t0KUZEUOdMWBQ_OlF24GZ8YV4jQeGhwIMb2LyI1DrmndQpBl-bF6qJEzRVeaCOr5oe-vgEaRt-sH7ts5IJ3WRqwiEHj5E1pJ1bXXxp5ID5d3e_sdr0zmQA2z_Wxtv9TL79amVQo9KY-tSJ9QfOZAiErvffLJhXUxBaINVIPWIKEaJ7f2dCfIoNOlwoy-BLQ9NY-ry8crpNDwHSLpjFAdcCuoYiuZ2YF5kb-y0-I3UIzmjSuFlNcxTKP5xhOftzWEWUp2g9PL_pLi-3p0Mx8i4Sq21AdBJl4lxIz_-BuUS7o4Xe84EizJ2WtW8WbPAHWibBR7kXUT6pyCbI-LiIMyzvTNQsE-hZa-nfvz9zWoArdcZTAEAowNf0mruOdVafo_JDVyDqYC-1S-J-WiVJOEtTV9Lk3erEd8uNE-NbNS6PttPo87pCWSNJ_f_UIeM5GzfTt5Sw9jndgelZ6nQHidVP3DM",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}{{base}}{{version}}/feed/comment/44340640-4239-4fdc-b9c1-01d1a84c6de3?skip=0&take=10",
+							"host": [
+								"{{protocol}}{{host}}{{port}}{{base}}{{version}}"
+							],
+							"path": [
+								"feed",
+								"comment",
+								"44340640-4239-4fdc-b9c1-01d1a84c6de3"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "take",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Feed - Comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id_user",
+									"value": "3b932b7d-f25f-11ed-8cad-0242ac120002",
+									"description": "ID user yang comment",
+									"type": "text"
+								},
+								{
+									"key": "id_parent",
+									"value": "77c5d29e-1495-42c6-97d1-68ea7b9ef435",
+									"type": "text"
+								},
+								{
+									"key": "comment",
+									"value": "Dummy comment child",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}{{base}}{{version}}/feed/comment/44340640-4239-4fdc-b9c1-01d1a84c6de3",
+							"host": [
+								"{{protocol}}{{host}}{{port}}{{base}}{{version}}"
+							],
+							"path": [
+								"feed",
+								"comment",
+								"44340640-4239-4fdc-b9c1-01d1a84c6de3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Feed - Share List",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJiM2VhNWFjNi00ZDMxLTQzN2ItOTY2MC00YTJiMTgyZjU2ODMiLCJqdGkiOiJmNGE1ODE2YjEyNjUwOTE0YjQwYjZhY2I3ODg4MWRlZTA3ZDUyNDcxM2NiMTBlYzcwNGRmYTM1ZTkyMThhNDgzOWQ0MWQ0YWFiOWE3YzBiMyIsImlhdCI6MTY4NDA2NTg5MC41NDQ0NzgsIm5iZiI6MTY4NDA2NTg5MC41NDQ0NzksImV4cCI6MTY5OTk2MzQ5MC41MzAzNjMsInN1YiI6IjAiLCJzY29wZXMiOltdfQ.NE4Y9nknscZ6hlA_1OIFpgu2X_KDKOVtMx5i1LUAitPr8RAs3o3cAFa7PY1DJLhVQe0y7th54RW-DimtqR2dqK5GNDhWj4wAaZXrL0d3sG33kChmjkxmKyTemnrfr70-ko1mxt0LN0I2RKnJ12r307JMeSyqYjfp1_k5wWufhIbq03ge2Rt7zNQzK9U_hIYmbfCdK1oD7piBes_Pt8t0KUZEUOdMWBQ_OlF24GZ8YV4jQeGhwIMb2LyI1DrmndQpBl-bF6qJEzRVeaCOr5oe-vgEaRt-sH7ts5IJ3WRqwiEHj5E1pJ1bXXxp5ID5d3e_sdr0zmQA2z_Wxtv9TL79amVQo9KY-tSJ9QfOZAiErvffLJhXUxBaINVIPWIKEaJ7f2dCfIoNOlwoy-BLQ9NY-ry8crpNDwHSLpjFAdcCuoYiuZ2YF5kb-y0-I3UIzmjSuFlNcxTKP5xhOftzWEWUp2g9PL_pLi-3p0Mx8i4Sq21AdBJl4lxIz_-BuUS7o4Xe84EizJ2WtW8WbPAHWibBR7kXUT6pyCbI-LiIMyzvTNQsE-hZa-nfvz9zWoArdcZTAEAowNf0mruOdVafo_JDVyDqYC-1S-J-WiVJOEtTV9Lk3erEd8uNE-NbNS6PttPo87pCWSNJ_f_UIeM5GzfTt5Sw9jndgelZ6nQHidVP3DM",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}{{base}}{{version}}/feed/share/44340640-4239-4fdc-b9c1-01d1a84c6de3?skip=0&take=10",
+							"host": [
+								"{{protocol}}{{host}}{{port}}{{base}}{{version}}"
+							],
+							"path": [
+								"feed",
+								"share",
+								"44340640-4239-4fdc-b9c1-01d1a84c6de3"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "take",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Feed - Share",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id_user",
+									"value": "3b932b7d-f25f-11ed-8cad-0242ac120002",
+									"description": "ID user yang comment",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}{{base}}{{version}}/feed/share/44340640-4239-4fdc-b9c1-01d1a84c6de3",
+							"host": [
+								"{{protocol}}{{host}}{{port}}{{base}}{{version}}"
+							],
+							"path": [
+								"feed",
+								"share",
+								"44340640-4239-4fdc-b9c1-01d1a84c6de3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Feed - Uncomment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}{{base}}{{version}}/feed/uncomment/f2cccd01-0036-4ae4-a727-5305905c4286",
+							"host": [
+								"{{protocol}}{{host}}{{port}}{{base}}{{version}}"
+							],
+							"path": [
+								"feed",
+								"uncomment",
+								"f2cccd01-0036-4ae4-a727-5305905c4286"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Feed - Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id_user",
+									"value": "14b76eea-f25f-11ed-8cad-0242ac120002",
+									"description": "ID user yang mengupload feed",
+									"type": "text"
+								},
+								{
+									"key": "caption",
+									"value": "Feed Dummy",
+									"type": "text"
+								},
+								{
+									"key": "attachment[]",
+									"type": "file",
+									"src": "/Users/randytrihandhoko/Downloads/image/air-balloon.png"
+								},
+								{
+									"key": "attachment[]",
+									"type": "file",
+									"src": "/Users/randytrihandhoko/Downloads/image/hill.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}{{base}}{{version}}/feed",
+							"host": [
+								"{{protocol}}{{host}}{{port}}{{base}}{{version}}"
+							],
+							"path": [
+								"feed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Feed - Index",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJiM2VhNWFjNi00ZDMxLTQzN2ItOTY2MC00YTJiMTgyZjU2ODMiLCJqdGkiOiJmNGE1ODE2YjEyNjUwOTE0YjQwYjZhY2I3ODg4MWRlZTA3ZDUyNDcxM2NiMTBlYzcwNGRmYTM1ZTkyMThhNDgzOWQ0MWQ0YWFiOWE3YzBiMyIsImlhdCI6MTY4NDA2NTg5MC41NDQ0NzgsIm5iZiI6MTY4NDA2NTg5MC41NDQ0NzksImV4cCI6MTY5OTk2MzQ5MC41MzAzNjMsInN1YiI6IjAiLCJzY29wZXMiOltdfQ.NE4Y9nknscZ6hlA_1OIFpgu2X_KDKOVtMx5i1LUAitPr8RAs3o3cAFa7PY1DJLhVQe0y7th54RW-DimtqR2dqK5GNDhWj4wAaZXrL0d3sG33kChmjkxmKyTemnrfr70-ko1mxt0LN0I2RKnJ12r307JMeSyqYjfp1_k5wWufhIbq03ge2Rt7zNQzK9U_hIYmbfCdK1oD7piBes_Pt8t0KUZEUOdMWBQ_OlF24GZ8YV4jQeGhwIMb2LyI1DrmndQpBl-bF6qJEzRVeaCOr5oe-vgEaRt-sH7ts5IJ3WRqwiEHj5E1pJ1bXXxp5ID5d3e_sdr0zmQA2z_Wxtv9TL79amVQo9KY-tSJ9QfOZAiErvffLJhXUxBaINVIPWIKEaJ7f2dCfIoNOlwoy-BLQ9NY-ry8crpNDwHSLpjFAdcCuoYiuZ2YF5kb-y0-I3UIzmjSuFlNcxTKP5xhOftzWEWUp2g9PL_pLi-3p0Mx8i4Sq21AdBJl4lxIz_-BuUS7o4Xe84EizJ2WtW8WbPAHWibBR7kXUT6pyCbI-LiIMyzvTNQsE-hZa-nfvz9zWoArdcZTAEAowNf0mruOdVafo_JDVyDqYC-1S-J-WiVJOEtTV9Lk3erEd8uNE-NbNS6PttPo87pCWSNJ_f_UIeM5GzfTt5Sw9jndgelZ6nQHidVP3DM",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}{{base}}{{version}}/feed",
+							"host": [
+								"{{protocol}}{{host}}{{port}}{{base}}{{version}}"
+							],
+							"path": [
+								"feed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Feed - Find",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJiM2VhNWFjNi00ZDMxLTQzN2ItOTY2MC00YTJiMTgyZjU2ODMiLCJqdGkiOiJmNGE1ODE2YjEyNjUwOTE0YjQwYjZhY2I3ODg4MWRlZTA3ZDUyNDcxM2NiMTBlYzcwNGRmYTM1ZTkyMThhNDgzOWQ0MWQ0YWFiOWE3YzBiMyIsImlhdCI6MTY4NDA2NTg5MC41NDQ0NzgsIm5iZiI6MTY4NDA2NTg5MC41NDQ0NzksImV4cCI6MTY5OTk2MzQ5MC41MzAzNjMsInN1YiI6IjAiLCJzY29wZXMiOltdfQ.NE4Y9nknscZ6hlA_1OIFpgu2X_KDKOVtMx5i1LUAitPr8RAs3o3cAFa7PY1DJLhVQe0y7th54RW-DimtqR2dqK5GNDhWj4wAaZXrL0d3sG33kChmjkxmKyTemnrfr70-ko1mxt0LN0I2RKnJ12r307JMeSyqYjfp1_k5wWufhIbq03ge2Rt7zNQzK9U_hIYmbfCdK1oD7piBes_Pt8t0KUZEUOdMWBQ_OlF24GZ8YV4jQeGhwIMb2LyI1DrmndQpBl-bF6qJEzRVeaCOr5oe-vgEaRt-sH7ts5IJ3WRqwiEHj5E1pJ1bXXxp5ID5d3e_sdr0zmQA2z_Wxtv9TL79amVQo9KY-tSJ9QfOZAiErvffLJhXUxBaINVIPWIKEaJ7f2dCfIoNOlwoy-BLQ9NY-ry8crpNDwHSLpjFAdcCuoYiuZ2YF5kb-y0-I3UIzmjSuFlNcxTKP5xhOftzWEWUp2g9PL_pLi-3p0Mx8i4Sq21AdBJl4lxIz_-BuUS7o4Xe84EizJ2WtW8WbPAHWibBR7kXUT6pyCbI-LiIMyzvTNQsE-hZa-nfvz9zWoArdcZTAEAowNf0mruOdVafo_JDVyDqYC-1S-J-WiVJOEtTV9Lk3erEd8uNE-NbNS6PttPo87pCWSNJ_f_UIeM5GzfTt5Sw9jndgelZ6nQHidVP3DM",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}{{base}}{{version}}/feed/14b76eea-f25f-11ed-8cad-0242ac120002",
+							"host": [
+								"{{protocol}}{{host}}{{port}}{{base}}{{version}}"
+							],
+							"path": [
+								"feed",
+								"14b76eea-f25f-11ed-8cad-0242ac120002"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
